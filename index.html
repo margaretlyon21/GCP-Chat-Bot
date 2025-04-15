@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Info Chatbot</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+  <style>
+    :root {
+      --primary: #4e73df;
+      --secondary: #f8f9fc;
+      --text: #343a40;
+      --background: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--secondary);
+      color: var(--text);
+      padding-bottom: 100px; /* For chatbot */
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .info-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-top: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .info-section:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-section h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .info-section ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #f1f1f1;
+      --df-messenger-user-message: #e3e7fd;
+      --df-messenger-button-titlebar-color: var(--primary);
+      --df-messenger-chat-background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>College Info Chatbot</h1>
+    <p>Ask me anything about the university! 🎓</p>
+  </header>
+
+  <main>
+    <div class="info-section">
+      <h2>What Can I Help You With?</h2>
+      <ul>
+        <li>College Football Program</li>
+        <li>Computer Science Program Information</li>
+        <li>On Campus Housing Information</li>
+        <li>Tuition and financial aid</li>
+      </ul>
+    </div>
+
+    <div class="info-section">
+      <h2>About This Chatbot</h2>
+      <p>
+        This chatbot is powered by Google Dialogflow and is here to assist you 24/7 with information about our university.
+        It's designed to make your life easier and get you the answers you need — fast!
+      </p>
+    </div>
+  </main>
+
+  <!-- Dialogflow Messenger Widget -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="CollegeInfoBot"
+    agent-id="344a19b5-171c-4cae-a1a7-91a3b8a99f63"
+    language-code="en"
+  ></df-messenger>
+
+</body>
+</html>
